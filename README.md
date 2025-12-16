@@ -37,7 +37,9 @@ A responsive web application built with **vanilla HTML, CSS, and JavaScript** to
 
 ## 🚀 Getting Started
 
-1. Clone the repository:
+You can view the hosted project here: [Pine City Zoo App](https://mary1na-code.github.io/pine-city-zoo-by-code-mary/)
+
+Clone the repository:
    ```bash
    git clone https://github.com/Mary1na-Code/pine-city-zoo-by-code-mary
 
