@@ -1,0 +1,372 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none; 
+}
+
+body{
+    font-family: 'Lato', sans-serif;
+    font-size: 1.6rem;
+    max-height: fit-content;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+/* ------ ROOT ------ */
+:root{
+    --primary-color-orange:rgb(255, 123, 0);
+    --sec-color-green:darkgreen;
+    --h1-font-size:5.4rem;
+    --h1-font-weight:500;
+    --h3-font-size:2.4rem;
+
+}
+
+/* ------ TEXT FORMATING ------- */
+h1{
+    font-size:var(--h1-font-size) ;
+    font-weight: var(--h1-font-weight);
+    font-family: 'Roboto', sans-serif;
+}
+h2,h3,h4,h5,h6{
+    font-family: 'Roboto', sans-serif;
+}
+h3{
+    font-size: var(--h3-font-size);
+}
+p{
+    line-height: 2.4rem;
+    font-size:1.6rem ;
+}
+
+/* Form controls inherit body font (Lato) for cohesive UI */
+input, textarea, select, button{
+    font-family: 'Lato', sans-serif;
+}
+
+/* ------ HEADER ------ */
+header{
+    background-image: url("images/wood-bg.png");
+    background-position: center;
+    display: flex;
+    place-content: center ;
+    padding: 2%;
+}
+
+header img{
+    width: calc(36% + 10rem);
+}
+
+/* ------ NAV ------ */
+nav{
+    display: flex;
+    justify-content: space-evenly;
+    background-color: var(--sec-color-green);
+    padding-block: calc(24px - 6px);
+    font-weight: 500;
+    z-index: 500;
+}
+
+nav a{
+    color: white;
+    font-size: calc(1.6rem - 2px);
+}
+
+nav a:hover{
+    color:var(--primary-color-orange) ;
+}
+
+.nav-top{
+    position: sticky;
+    top: 0;
+    z-index: 500;
+}
+
+.nav-bottom{
+    position: sticky;
+    bottom: 0;
+    z-index: 500;
+}
+
+main{
+    padding-bottom: 6rem;
+}
+
+
+/* ------- ANIMAL & PLACES PAGE ------ */
+.list{
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
+}
+
+ .list a{
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    padding-inline: 2rem;
+    padding-block: 2rem;
+    margin-inline: 4rem;
+    color: rgb(31, 36, 32);
+    background-color: rgba(255, 255, 255, 0.7);
+    height: fit-content;
+} 
+
+span > h3,
+span > p{
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+}
+
+.skip{
+    position: absolute;
+    left: -9999px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+.skip:focus, .skip:focus-visible{
+    position: static;
+    left: 1rem;
+    top: 1rem;
+    width: auto;
+    height: auto;
+    padding: 0.6rem 1rem;
+    background: var(--primary-color-orange);
+    color: white;
+    z-index: 1000;
+    border-radius: 4px;
+}
+
+
+a:focus, a:focus-visible{
+    outline: 3px solid var(--primary-color-orange);
+    outline-offset: 2px;
+}
+span{
+    max-width:80% ;
+}
+
+/* ------ INDIVIDUAL PAGES CONTENT ------- */
+.page-content{
+    background-color: rgba(255, 255, 255, 0.8);
+    margin: 2rem;
+    padding: 4rem;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 3.2rem;
+}
+
+.image-container{
+    width: 90%;
+    margin: auto;
+}
+.image-container img{
+    width: 100%;
+    height: auto;   
+}
+
+.written-content{
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    width: 90%;
+    margin: auto;
+    padding-top: 1rem;
+}
+.text-group{
+    display: flex;
+    flex-direction: column;
+    column-gap: 1rem;
+}
+.text-group > strong{
+    margin-bottom: 0.6rem;
+}
+
+/* ------ Form controls (feedback form) ------- */
+.feedback-form{
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+    width: 100%;
+}
+.feedback-form .text-group{
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+.feedback-form label{
+    font-size: 1.6rem;
+    color: rgb(31,36,32);
+}
+.feedback-form input[type="text"],
+.feedback-form input[type="email"],
+.feedback-form select,
+.feedback-form textarea{
+    width: 100%;
+    padding: 0.9rem 1.2rem;
+    font-size: 1.6rem;
+    border: 1px solid rgba(31,36,32,0.15);
+    border-radius: 6px;
+    background: #fff;
+    box-shadow: 0 1px 0 rgba(0,0,0,0.02) inset;
+    transition: border-color 150ms ease, box-shadow 150ms ease;
+}
+.feedback-form textarea{
+    resize: vertical;
+}
+.feedback-form input:focus,
+.feedback-form select:focus,
+.feedback-form textarea:focus{
+    outline: none;
+    border-color: var(--primary-color-orange);
+    box-shadow: 0 0 0 4px rgba(255,123,0,0.12);
+}
+.feedback-form button{
+    align-self: flex-start;
+    background: var(--primary-color-orange);
+    color: #fff;
+    border: none;
+    padding: 0.9rem 1.6rem;
+    font-size: 1.6rem;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: filter 120ms ease, transform 80ms ease;
+}
+.feedback-form button:hover{
+    filter: brightness(0.95);
+}
+.feedback-form button:active{
+    transform: translateY(1px);
+}
+
+/* Star rating styles */
+.rating{
+    display: inline-flex;
+    gap: 0.4rem;
+    align-items: center;
+    flex-direction: row-reverse;
+    margin: auto;
+}
+.rating input[type="radio"]{
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+.rating label{
+    font-size: 4.8rem;
+    line-height: 1;
+    color: rgba(0,0,0,0.22);
+    cursor: pointer;
+    user-select: none;
+    transition: color 140ms cubic-bezier(.2,.8,.2,1), transform 120ms cubic-bezier(.2,.8,.2,1);
+    will-change: transform, color;
+}
+.rating label:hover,
+.rating label:hover ~ label,
+.rating input:checked ~ label{
+    color: var(--primary-color-orange);
+    transform: translateY(-6px);
+}
+
+/* keyboard focus: when input receives focus, highlight the associated label and predecessors */
+.rating input:focus + label,
+.rating input:focus + label ~ label{
+    color: var(--primary-color-orange);
+    transform: translateY(-2px);
+}
+
+
+
+/* ------- WEATHER PAGE ------- */
+.weather-page-content{
+    background-color: rgba(255, 255, 255, 0.8);
+    margin: 2rem;
+    padding: 4rem;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap:1.2rem;
+}
+
+.current-weather-forecast{
+    display: flex;
+    justify-items: center;
+    gap: 2rem;
+    align-items: center;
+    margin-top: 1.6rem;
+}
+.weather-page-content p{
+    font-weight: 600;
+    margin-block: 0.6rem;
+}
+
+/* ------- Table style ------- */
+
+table{
+   width: 100%;
+}
+/* table tr{
+    border: 1px solid black;
+} */
+td{
+    padding-block: 1rem;
+    padding-inline: 1.6rem;
+    border-top: 1px solid rgba(128, 128, 128, 0.7);
+    border-right:4px solid transparent ;
+}
+
+/* ------ MEDIA QUERY ------ */
+
+@media screen and (min-width:991px){
+    nav{
+        display: flex;
+        justify-content: center;
+        column-gap: 10.6rem;
+    }
+
+    /* ------ Animals & Places pages ------ */
+    h3{
+        font-size: 2.4rem;
+        line-height: 3.2rem;
+    }
+
+    p{
+        font-size: 1.8rem;
+        line-height: 2.6rem;
+    }
+
+    .list{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        padding-inline: 5%;
+    }
+
+    /* ------ Animals & Places pages content ------ */
+    .written-content{
+        display: flex;
+        flex-direction:column ;
+        gap: 3.2rem;
+        width: 64%;
+    }
+
+    .image-container{
+        width: 64%;
+    }
+
+    /* ------- WEATHER PAGE ------- */
+    .weather-page-content{
+        padding: 4rem 20rem;
+    }
+    
+}
