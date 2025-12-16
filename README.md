@@ -41,17 +41,9 @@ A responsive web application built with **vanilla HTML, CSS, and JavaScript** to
    ```bash
    git clone https://github.com/Mary1na-Code/pine-city-zoo-by-code-mary
 
+---
 
-Pine City Zoo — Static Site
-===========================
-
-Concise, static multi-page site built with plain HTML and CSS for a small zoo demo.
-
-What this repo is
-- A small, dependency-free static website with pages for animals, places, weather, and feedback.
-- Built for learning and quick static hosting.
-
-Project structure (key files)
+### Project structure (key files)
 - index.html — map / homepage
 - a_*.html (files for the animal pages) and p_*.html (files for places pages) — content pages 
 - style.css — global styles
