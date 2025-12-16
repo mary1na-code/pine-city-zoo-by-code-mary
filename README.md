@@ -42,6 +42,7 @@ You can view the hosted project here: [Pine City Zoo App](https://mary1na-code.g
 Clone the repository:
    ```bash
    git clone https://github.com/Mary1na-Code/pine-city-zoo-by-code-mary
+```
 
 ---
 
