@@ -1,7 +1,9 @@
 
 # 🦁 Pine City Zoo App
 
-A responsive web application built with **vanilla HTML, CSS, and JavaScript** to showcase the attractions of Pine City Zoo. The app provides an interactive experience for visitors, combining education, convenience, and fun.
+Pine City Zoo is your interactive digital zoo guide, featuring maps, animal details, recreation spots, snack locations, and real‑time weather alerts to help you plan the perfect visit.  
+
+Built with **vanilla HTML, CSS, and JavaScript**, the app provides an interactive experience for visitors, combining education, convenience, and fun.
 
 ---
 
